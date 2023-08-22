@@ -22,10 +22,9 @@ streamlit.dataframe(fruits_to_show)
 streamlit.header("Fruityvice Fruit Advice!")
 
 import requests
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon" + "kiwi")
 streamlit.text(fruityvice_response) # just writes the data to the screen
 
-# This normalizes something?
-fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
+
 # The shows the output of whatever we did as a table in Streamlit
 streamlit.dataframe(fruityvice_normalized)
