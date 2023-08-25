@@ -40,7 +40,6 @@ try:
 except URLError as e:
   streamlit.error()
 
-  
 streamlit.write('The user entered ', fruit_choice)
 # fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
 
@@ -49,7 +48,7 @@ streamlit.write('The user entered ', fruit_choice)
 # The shows the output of whatever we did as a table in Streamlit
 # streamlit.dataframe(fruityvice_normalized)
 
-streamlit.stop()
+# streamlit.stop()
 
 streamlit.header("The fruit load list contains:")
 # Snowflake-related functions
@@ -69,6 +68,8 @@ if streamlit.button('Get Fruit Load List'):
 # my_data_rows = my_cur.fetchall()
 # streamlit.header("The fruit load list contains:")
 # streamlit.dataframe(my_data_rows)
+
+streamlit.stop()
 
 # allow the end user to add a fruit to the list
 add_my_fruit = streamlit.text_input('What additional fruit would you like to add?')
